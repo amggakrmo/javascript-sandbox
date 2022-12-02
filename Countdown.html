@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./Countdown.css">
+    <script src="https://kit.fontawesome.com/fe0df356de.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#Countdown">Countdown</a>
+                <a href="#Calendar">Calendar</a>
+                <a href="../Music/Music.html">Music</a>
+            </div>
+        </div>
+    </header>
+    <section id="Countdown">
+        <div class="add-countdown-button">
+            <input type="button" id="add-button" value="add new event">
+        </div>
+        <div class="big-countdown-container">
+            <div class="big-countdown">
+                <div class="container">
+                    <h1 id="event-name">Event</h1>
+                    <h2> until: <span id="new-date-id"></span></h2>
+                    <div class="countdown-container">
+                        <div class="countdown-days-c">
+                            <p class="big-text" id="days">0</p>
+                            <span>days</span>
+                        </div>
+                        <div class="countdown-days-c">
+                            <p class="big-text" id="hours">0</p>
+                            <span>hours</span>
+                        </div>
+                        <div class="countdown-days-c">
+                            <p class="big-text" id="minutes">0</p>
+                            <span>minutes</span>
+                        </div>
+                        <div class="countdown-days-c">
+                            <p class="big-text" id="seconds">0</p>
+                            <span>seconds</span>
+                        </div>
+                    </div>
+                    <div class="update-expose">
+                        <i class="fa-solid fa-caret-up"></i>
+                    </div>
+                </div>
+                <div class="update-container">
+                    <div class="event-update">
+                        <label for="new-event-name">Event:</label>
+                        <input type="text" placeholder="Enter event name" id="new-event-name">
+                        <!-- <input type="button" id="event-name-button" value="update"> -->
+                    </div>
+                    <div class="date-update">
+                        <div class="new-date-container">
+                            <input id="new-date" type="date" placeholder="enter new event date">
+                            <!-- <input type="button" value="update date" id="new-date-button"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar -->
+    <section id="Calendar">
+        <div id="calendar-container">
+            <div id="header">
+                <div id="monthDisplay"></div>
+                <div>
+                    <button id="backButton">Back</button>
+                    <button id="nextButton">Next</button>
+                </div>
+            </div>
+
+            <div id="weekdays">
+                <div>Sunday</div>
+                <div>Monday</div>
+                <div>Tuesday</div>
+                <div>Wednesday</div>
+                <div>Thursday</div>
+                <div>Friday</div>
+                <div>Saturday</div>
+            </div>
+
+            <div id="calendar"></div>
+        </div>
+
+        <div id="newEventModal">
+            <h2>New Event</h2>
+
+            <input id="eventTitleInput" placeholder="Event Title" />
+
+            <button id="saveButton">Save</button>
+            <button id="cancelButton">Cancel</button>
+        </div>
+
+        <div id="deleteEventModal">
+            <h2>Event</h2>
+
+            <p id="eventText"></p>
+
+            <button id="deleteButton">Delete</button>
+            <button id="closeButton">Close</button>
+        </div>
+
+        <div id="modalBackDrop"></div>
+    </section>
+    <section class="lofi">
+        <div class="lofi-container">
+            <div class="lofi-music">
+                <audio src=""></audio>
+            </div>
+        </div>
+    </section>
+    <div class="to-top-container">
+        <a href="#" class="to-top">
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
+    </div>
+
+
+    <script src="./Countdown.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
+</body>
+
+</html>

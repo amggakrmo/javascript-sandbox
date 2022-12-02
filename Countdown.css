@@ -1,0 +1,359 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* header */
+
+
+header {
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+    background-color: black;
+    position: fixed;
+}
+
+header .navigation {
+    position: relative;
+}
+
+.navigation-items {
+    display: flex;
+    justify-content: center;
+}
+
+header .navigation .navigation-items a {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+/* 
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+} */
+
+/* body */
+
+body {
+    /* background: linear-gradient(153deg, rgb(34, 2, 94), rgb(38, 21, 37)); */
+    background-color: #262626;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.big-countdown-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem;
+}
+
+.big-countdown {
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.container {
+    background-color: white;
+    margin: auto;
+    padding: 3rem 3rem 1rem 3rem;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    /* position: absolute; */
+    margin-top: 30px;
+}
+
+.container h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.container h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.countdown-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.big-text {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1, 2;
+    margin: 1rem 2rem;
+}
+
+.countdown {
+    text-align: center;
+}
+
+.countdown-days-c span {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.update-expose {
+    display: flex;
+    justify-content: center;
+    transform: rotate(90deg);
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.update-container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    /* position: absolute; */
+    display: block;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    transition: all 0.5s;
+    transform: translatex(-300px);
+
+}
+
+.update-container.active {
+    transform: translatex(10px);
+
+}
+
+.active .update-expose {
+    transform: rotate(180deg);
+}
+
+.date-update {
+    margin-top: 10px;
+}
+
+.new-date-container {
+    display: flex;
+    justify-content: center;
+}
+
+.add-countdown-button {
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 80px;
+}
+
+#add-button {
+    padding: 10px;
+    font-size: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* calendar */
+
+.Calendar {
+    width: 1400px;
+    height: 100%;
+}
+
+button {
+    width: 75px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px gray;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+#header {
+    padding: 10px;
+    color: #3eff61;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header button {
+    background-color: #92a1d1;
+}
+
+#calendar-container {
+    width: 770px;
+}
+
+#weekdays {
+    width: 100%;
+    display: flex;
+    color: #7ed8ff;
+}
+
+#weekdays div {
+    width: 110px;
+    padding: 10px;
+}
+
+#calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day {
+    width: 100px;
+    padding: 10px;
+    height: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 5px;
+    box-shadow: 0px 0px 3px #CBD4C2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.day:hover {
+    background-color: #e8faed;
+}
+
+.day+#currentDay {
+    background-color: #e8f4fa;
+}
+
+.event {
+    font-size: 10px;
+    padding: 3px;
+    background-color: #58bae4;
+    color: white;
+    border-radius: 5px;
+    max-height: 55px;
+    overflow: hidden;
+}
+
+.padding {
+    cursor: default !important;
+    background-color: #FFFCFF !important;
+    box-shadow: none !important;
+}
+
+#newEventModal,
+#deleteEventModal {
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: #e8f4fa;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 350px;
+    top: 100px;
+    left: calc(50% - 175px);
+    position: fixed;
+    font-family: sans-serif;
+}
+
+#eventTitleInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+#eventTitleInput.error {
+    border: 2px solid red;
+}
+
+#cancelButton,
+#deleteButton {
+    background-color: #d36c6c;
+}
+
+#saveButton,
+#closeButton {
+    background-color: #92a1d1;
+}
+
+#eventText {
+    font-size: 14px;
+}
+
+#modalBackDrop {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+/* back to top */
+
+.to-top {
+    background-color: white;
+    bottom: 1rem;
+    right: 2rem;
+    position: fixed;
+    padding: 1rem;
+    border-radius: 50%;
+    z-index: 1;
+    color: black;
+    font-size: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: all;
+    opacity: 1;
+    z-index: 1;
+}
